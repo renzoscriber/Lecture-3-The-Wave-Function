@@ -1,0 +1,77 @@
+\documentclass{article}
+
+% Start Preamble
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage[english]{babel}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{standalone}
+\usepackage{parskip}
+\usepackage[version=4]{mhchem}
+\usepackage{bbold}
+
+\title{Lecture 2: Experimental Facts of Life}
+\author{Renzo Shredder}
+\date{October 4 2018}
+% End Preamble
+
+\title{Lecture 3: The Wave Function}
+\author{Lauren Shriver}
+\date{October 10 2018}
+
+\begin{document}
+
+\maketitle
+\section*{Introduction}
+\subsection*{Overview for next few lectures}
+Now that we have some experimental incentive to take an interest in quantum mechanics, we are going to accept a set of postulates defining QM and working through their consequences. The rest of the semester will involve studying examples to develop an understanding of what the postulates of quantum mechanics actually implicates. 
+\subsection*{Classical definition of systems}
+Before completely scrapping classical mechanics, lets use it as a guide to define a system. 
+\\
+\\
+The simplest \textbf{system} considered in classical mechanics is a single point particle. In CM, we specify the configuration/state of this system in terms of its position and momentum, denoted $\{ \vec{x}, \vec{\rho} \}$. 
+\begin{itemize}
+    \item Importantly, from a classical mechanical PoV, this information for a system defined as a point particle gives you all information about that system. 
+    \item e.g., you can determine its energy $E(\vec{x},\vec{\rho})$ or angular momentum $\vec{L}(\vec{x},\vec{\rho})$
+\end{itemize}
+\\
+Conundrum: In QM (and real world for that matter), we know there exists an uncertainty relation between a particle's position and momentum.
+\begin{itemize}
+    \item From the last lecture, we can conclude that the uncertainty in a particle's position $\Delta x$ and the uncertainty in its momentum $\Delta \rho$ are somehow proportional to the reduced Planck constant: 
+        \begin{equation}
+            \Delta x \Delta \rho \propto \hbar
+        \end{equation}
+    \item Due to this uncertainty relation, you can't truly specify (i.e., define the state of a system with 100\% certainly) a system defined in terms of classical mechanics. 
+    \item Moreover, we need a new way to specify the state/configuration of a system (first postulate in QM) 
+\end{itemize}
+\section*{Postulate 1}
+The configuration/\textbf{state} of a quantum object is \textit{completely} specified by a wave function $\Psi(x)$ where $\Psi$ is a complex function and $x$ denotes position. 
+\section*{Postulate 2}
+The wave function described in the first postulate can be interpreted in terms of the probability of measuring a particle's position at position $x$. This specific relation is mathematically defined as follows: 
+\begin{equation}
+    	\mathbb{P}(x) = | \Psi (x) | ^2
+\end{equation}
+Specifically, $\mathbb{P}(x)$ denotes the probability density that an object of interest in a state given by $\Psi(x)$ will be located at position $x$.
+\begin{itemize}
+    \item Note: A probability density  refers to the probability of our object being located somewhere between $x$ and $x+dx$: 
+        \begin{equation}
+            \mathbb{P}(x,x+dx) = \mathbb{P}(x) \, dx = |\Psi (x)|^2 \, dx
+        \end{equation}
+\end{itemize}
+\\
+Aside: If our wave function isn't normalized, we can use the following relation to obtain our probability distribution (Note: $D$ denotes the domain of $x$).
+    \begin{equation}
+        \mathbb{P}(x) = \frac{|\Psi(x)|^2}{\int\limits_D \! |\Psi(x)|^2 \, dx}
+    \end{equation}
+\section*{Postulate 3*}
+Given two possible states/configurations of a quantum system corresponding to two distinct wave functions $\Psi_1(x)$ and $\Psi_2(x)$, the system can also be in a \textbf{superposition} of $\Psi_1(x)$ and $\Psi_2(x)$: 
+    \begin{equation}
+        \Psi (x) = \alpha \Psi_1(x) + \beta \Psi_2(x) \quad \quad \mathrm{where} \, \, \alpha , \beta \in \mathbb{C}
+    \end{equation}
+In other words, for any two possible configurations of the system, there is also an allowed configuration of the system corresponding to being in an arbitrary superposition of them.
+\\
+\\
+***This is the "beating soul" of quantum mechanics - i.e., its the most important postulate. 
+\end{document}
